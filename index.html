@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Cá Nhân - Trần Đình Tuấn</title>
+    <!-- 11. Clean Code: Liên kết file CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Liên kết Font Awesome để dùng Icon (Criteria 5, 6, 9) -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Link Google Fonts (Tùy chọn) -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- 1. Phần Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand">Trần Đình Tuấn</div>
+        <ul class="nav-links">
+            <li><a href="#about" class="content" data-vi="Giới thiệu" data-en="About">Giới thiệu</a></li>
+            <li><a href="#objective" class="content" data-vi="Mục tiêu" data-en="Objective">Mục tiêu</a></li>
+            <li><a href="#hobbies" class="content" data-vi="Sở thích" data-en="Hobbies">Sở thích</a></li>
+            <li><a href="#skills" class="content" data-vi="Kỹ năng & Ngôn ngữ" data-en="Skills @ Language">Kỹ năng & Ngôn ngữ</a></li>
+            <li><a href="#certificates" class="content" data-vi="Chứng chỉ" data-en="Certificates">Chứng chỉ</a></li>
+            <li><a href="#projects" class="content" data-vi="Dự án" data-en="Projects">Dự án</a></li>
+            <li><a href="#gallery" class="content" data-vi="Thư viện ảnh" data-en="Gallery">Thư viện ảnh</a></li>
+            <li><a href="#game" class="content" data-vi="Mini Game" data-en="Mini Game">Mini Game</a></li>
+            <li><a href="#contact" class="content" data-vi="Liên hệ" data-en="Contact">Liên hệ</a></li>
+        </ul>
+        <div class="controls">
+            <div class="toggle-switch">
+                <label>
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <select class="language-switch">
+                <option value="vi">VI</option>
+                <option value="en">EN</option>
+            </select>
+        </div>
+    </nav>
+
+    <!-- 1. Phần Banner (Hero Section) -->
+    <header id="home" class="hero-banner">
+        <div class="banner-overlay">
+            <!-- 12. Ứng dụng CSS3 nâng cao: Dùng animation cho tiêu đề -->
+            <h1 class="animate-fade-in">TRẦN ĐỊNH TUẤN</h1>
+            <p class="animate-fade-in-delay content" 
+            data-vi="LẬP TRÌNH VIÊN ANDROID" 
+            data-en="ANDROID DEVELOPER">LẬP TRÌNH VIÊN ANDROID</p>
+            <div id="clock" class="animate-fade-in-delay"></div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- 3. & 10. Phần Thông tin cá nhân (Giới thiệu) -->
+        <section id="about" class="section">
+            <h2 class="content" data-vi="<i class='fas fa-user-circle'></i> GIỚI THIỆU" data-en="<i class='fas fa-user-circle'></i> ABOUT">
+                <i class="fas fa-user-circle"></i> GIỚI THIỆU
+            </h2>
+            <!-- 2. Layout website: Dùng CSS Grid cho phần bố cục thông tin cá nhân -->
+            <div class="profile-grid">
+                <div class="profile-info">
+                    <h3>Trần Đình Tuấn</h3>
+                    <p><strong class="content" data-vi="Nghề nghiệp:" data-en="Occupation:">Nghề nghiệp:</strong> 
+                        <span class="content" data-vi="Lập trình viên Android" data-en="Android Developer">Lập trình viên Android</span>
+                    </p>
+                    <p><strong class="content" data-vi="Ngày sinh:" data-en="Date of Birth:">Ngày sinh:</strong> 
+                        <span class="content" data-vi="19/02/2005" data-en="19/02/2005">19/02/2005</span>
+                    </p>
+                    <p><strong class="content" data-vi="Địa chỉ:" data-en="Address:">Địa chỉ:</strong> 
+                        <span class="content" data-vi="TP. Hồ Chí Minh, Việt Nam" data-en="Ho Chi Minh City, Vietnam">TP. Hồ Chí Minh, Việt Nam</span>
+                    </p>
+                    <p><strong class="content" data-vi="Điện thoại:" data-en="Phone:">Điện thoại:</strong> 
+                        <span class="content" data-vi="0123 456 789" data-en="0123 456 789">0123 456 789</span>
+                    </p>
+                    <p><strong>Email:</strong> 
+                        <span class="content" data-vi="trandinhtuan0219@gmail.com" data-en="trandinhtuan0219@gmail.com">trandinhtuan0219@gmail.com</span>
+                    </p>
+                </div>
+                <div class="profile-avatar">
+                    <!-- 13. Ảnh cá nhân: Sử dụng ảnh mẫu từ unsplash.it -->
+                    <img src="https://unsplash.it/200/200?gravity=face" alt="Ảnh đại diện Trần Đình Tuấn">
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Phần Mục tiêu nghề nghiệp -->
+        <section id="objective" class="section">
+            <h2 class="content" data-vi="<i class='fas fa-bullseye'></i> MỤC TIÊU NGHỀ NGHIỆP" data-en="<i class='fas fa-bullseye'></i> CAREER OBJECTIVE">
+                <i class="fas fa-bullseye"></i> MỤC TIÊU NGHỀ NGHIỆP
+            </h2>
+            <p class="content" data-vi="Mục tiêu ngắn hạn là trở thành một lập trình viên Android Junior có khả năng làm việc độc lập và đóng góp tích cực vào các dự án di động. Mục tiêu dài hạn là trở thành một chuyên gia phát triển phần mềm di động, dẫn dắt các dự án lớn, và áp dụng các công nghệ mới nhất như AI/ML vào ứng dụng di động." data-en="Short-term goal is to become a Junior Android developer capable of working independently and actively contributing to mobile projects. Long-term goal is to become an expert in mobile software development, lead large projects, and apply the latest technologies like AI/ML to mobile applications.">
+                Mục tiêu ngắn hạn là trở thành một lập trình viên Android Junior có khả năng làm việc độc lập và đóng góp
+                tích cực vào các dự án di động. Mục tiêu dài hạn là trở thành một chuyên gia phát triển phần mềm di
+                động, dẫn dắt các dự án lớn, và áp dụng các công nghệ mới nhất như AI/ML vào ứng dụng di động.
+            </p>
+        </section>
+
+        <!-- 5. Phần Sở thích -->
+        <section id="hobbies" class="section">
+            <h2 class="content" data-vi="<i class='fas fa-heart'></i> SỞ THÍCH" data-en="<i class='fas fa-heart'></i> HOBBIES">
+                <i class="fas fa-heart"></i> SỞ THÍCH
+            </h2>
+            <!-- 2. Layout website: Dùng Flexbox cho bố cục Sở thích -->
+            <div class="hobby-list">
+                <!-- 5. Thẻ card mini và hiệu ứng hover -->
+                <div class="hobby-card">
+                    <i class="fas fa-gamepad"></i>
+                    <span class="content" data-vi="Chơi game" data-en="Gaming">Chơi game</span>
+                </div>
+                <div class="hobby-card">
+                    <i class="fas fa-book-open"></i>
+                    <span class="content" data-vi="Đọc sách" data-en="Reading">Đọc sách</span>
+                </div>
+                <div class="hobby-card">
+                    <i class="fas fa-film"></i>
+                    <span class="content" data-vi="Xem phim" data-en="Movies">Xem phim</span>
+                </div>
+                <div class="hobby-card">
+                    <i class="fas fa-code"></i>
+                    <span>Coding</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Phần Ngôn ngữ và Kỹ năng (Dùng Icon thay Progress Bar) -->
+        <section id="languages" class="section">
+            <h2 class="content" data-vi="<i class='fas fa-code'></i> NGÔN NGỮ & CÔNG NGHỆ" data-en="<i class='fas fa-code'></i> LANGUAGES & TECHNOLOGIES">
+                <i class="fas fa-code"></i> NGÔN NGỮ & CÔNG NGHỆ
+            </h2>
+            
+            <div class="tech-categories">
+                <div class="tech-category">
+                    <h3 class="content" data-vi="Frontend" data-en="Frontend">Frontend</h3>
+                    <div class="tech-grid">
+                        <div class="tech-card">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML</span>
+                        </div>
+                        <div class="tech-card">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS</span>
+                        </div>
+                        <div class="tech-card">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3 class="content" data-vi="Backend" data-en="Backend">Backend</h3>
+                    <div class="tech-grid">
+                        <div class="tech-card">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="tech-card">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="tech-card">
+                            <i class="fab fa-java"></i>
+                            <span>Java</span>
+                        </div>
+                        <div class="tech-card">
+                            <i class="fab fa-microsoft"></i>
+                            <span>C#</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3 class="content" data-vi="Design" data-en="Design">Design</h3>
+                    <div class="tech-grid">
+                        <div class="tech-card">
+                            <i class="fab fa-figma"></i>
+                            <span>Figma</span>
+                        </div>
+                        
+                        <div class="tech-card">
+                            <i class="fas fa-palette"></i>
+                            <span>Canva</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3 class="content" data-vi="DevOps" data-en="DevOps">DevOps</h3>
+                    <div class="tech-grid">
+                        <div class="tech-card">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3 class="content" data-vi="Mobile" data-en="Mobile">Mobile</h3>
+                    <div class="tech-grid">
+                        <div class="tech-card">
+                            <i class="fab fa-android"></i>
+                            <span>Kotlin</span>
+                        </div>
+                        <div class="tech-card">
+                            <i class="fab fa-android"></i>
+                            <span>Jetpack Compose</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3 class="content" data-vi="Database" data-en="Database">Database</h3>
+                    <div class="tech-grid">
+                        <div class="tech-card">
+                            <i class="fas fa-database"></i>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="tech-card">
+                            <i class="fas fa-database"></i>
+                            <span>SQLite</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3 class="content" data-vi="AI" data-en="AI">AI</h3>
+                    <div class="tech-grid">
+                        <div class="tech-card">
+                            <i class="fas fa-robot"></i>
+                            <span>Yolo</span>
+                        </div>
+                        <div class="tech-card">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="tech-card">
+                            <i class="fas fa-camera"></i>
+                            <span>OpenCV</span>
+                        </div>
+                        <div class="tech-card">
+                            <i class="fas fa-brain"></i>
+                            <span>CNN</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ngôn ngữ -->
+            <h3 class="content" data-vi="NGÔN NGỮ" data-en="LANGUAGES">NGÔN NGỮ</h3>
+            <ul class="language-list">
+                <li><i class="fas fa-check-circle"></i> <span class="content" data-vi="Tiếng Việt (Native)" data-en="Vietnamese (Native)">Tiếng Việt (Native)</span></li>
+                <li><i class="fas fa-check-circle"></i> <span class="content" data-vi="Tiếng Anh (B2)" data-en="English (B2)">Tiếng Anh (B2)</span></li>
+            </ul>
+        </section>
+
+        <!-- 7. Phần Chứng chỉ – Giải thưởng -->
+        <section id="certificates" class="section">
+            <h2 class="content" data-vi="<i class='fas fa-trophy'></i> CHỨNG CHỈ & GIẢI THƯỞNG" data-en="<i class='fas fa-trophy'></i> CERTIFICATES & AWARDS">
+                <i class="fas fa-trophy"></i> CHỨNG CHỈ & GIẢI THƯỞNG
+            </h2>
+            
+            <div class="certificates-container">
+                <!-- Chứng chỉ -->
+                <div class="cert-category">
+                    <h3 class="content" data-vi="Chứng chỉ" data-en="Certificates">Chứng chỉ</h3>
+                    <div class="cert-list">
+                        <div class="cert-item">
+                            <div class="cert-icon">
+                                <i class="fab fa-udemy"></i>
+                            </div>
+                            <div class="cert-content">
+                                <h4 class="content" data-vi="Mobile Development" data-en="Mobile Development">Mobile Development</h4>
+                                <p class="content" data-vi="Udemy" data-en="Udemy">Udemy</p>
+                            </div>
+                        </div>
+                        
+                        <div class="cert-item">
+                            <div class="cert-icon">
+                                <i class="fab fa-udemy"></i>
+                            </div>
+                            <div class="cert-content">
+                                <h4 class="content" data-vi="UI/UX Design" data-en="UI/UX Design">UI/UX Design</h4>
+                                <p class="content" data-vi="Udemy" data-en="Udemy">Udemy</p>
+                            </div>
+                        </div>
+                        
+                        <div class="cert-item">
+                            <div class="cert-icon">
+                                <i class="fab fa-hackerrank"></i>
+                            </div>
+                            <div class="cert-content">
+                                <h4 class="content" data-vi="Mobile Application Developer" data-en="Mobile Application Developer">Mobile Application Developer</h4>
+                                <p class="content" data-vi="HackerRank" data-en="HackerRank">HackerRank</p>
+                            </div>
+                        </div>
+                        
+                        <div class="cert-item">
+                            <div class="cert-icon">
+                                <i class="fab fa-hackerrank"></i>
+                            </div>
+                            <div class="cert-content">
+                                <h4 class="content" data-vi="MySQL" data-en="MySQL">MySQL</h4>
+                                <p class="content" data-vi="HackerRank" data-en="HackerRank">HackerRank</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Giải thưởng -->
+                <div class="cert-category">
+                    <h3 class="content" data-vi="Giải thưởng" data-en="Awards">Giải thưởng</h3>
+                    <div class="cert-list">
+                        <div class="cert-item">
+                            <div class="cert-icon award">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="cert-content">
+                                <h4 class="content" data-vi="Top 20 cuộc thi lập trình giải thuật" data-en="Top 20 Algorithm Programming Contest">Top 20 cuộc thi lập trình giải thuật</h4>
+                                <p class="content" data-vi="luyencode.net" data-en="luyencode.net">luyencode.net</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. & 13. Phần Dự án (Portfolio) -->
+        <section id="projects" class="section">
+            <h2 class="content" data-vi="<i class='fas fa-laptop-code'></i> DỰ ÁN" data-en="<i class='fas fa-laptop-code'></i> PROJECTS">
+                <i class="fas fa-laptop-code"></i> DỰ ÁN
+            </h2>
+            <!-- 2. Layout website: Dùng CSS Grid cho phần Dự án -->
+            <div class="project-grid">
+
+                <!-- Dự án 1: IntelliPark System-->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="https://unsplash.it/800/600?random=2" alt="Ảnh minh họa IntelliPark System">
+                        <div class="project-overlay">
+                            <a href="https://github.com/dinhtuandev/IntelliPark-System" class="github-link" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>IntelliPark System</h3>
+                        <p class="project-desc content" data-vi="Mô hình Computer Vision phát hiện xe đi sai làn và gửi cảnh báo về trung tâm điều khiển giao thông." data-en="A Computer Vision model to detect lane departure and send warnings to the traffic control center.">
+                            Sử dụng Mô hình Computer Vision và Machine learning phát hiện xe đi sai làn và gửi cảnh báo về trung
+                            tâm điều khiển giao thông.
+                        </p>
+                        <div class="project-tech-container">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Yolov8</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">Mask R-CNN</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dự án 2: TaskNotiva -->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="https://unsplash.it/800/600?random=3" alt="Ảnh minh họa TaskNotiva">
+                        <div class="project-overlay">
+                            <a href="#" class="github-link" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>TaskNotiva</h3>
+                        <p class="project-desc content" data-vi="Ứng dụng ToDoList cá nhân trên nền tảng Android, giúp quản lý công việc hàng ngày hiệu quả với giao diện Material Design." data-en="A personal ToDoList application on the Android platform, helping to manage daily tasks effectively with a Material Design interface.">
+                            Ứng dụng ToDoList cá nhân trên nền tảng Android, giúp quản lý công việc
+                            hàng ngày hiệu quả với giao diện Material Design.
+                        </p>
+                        <div class="project-status">
+                            <span class="status-badge">Đang phát triển</span>
+                        </div>
+                        <div class="project-tech-container">
+                            <span class="tech-tag">Kotlin</span>
+                            <span class="tech-tag">Jetpack Compose</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">SQLite</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Dự án 3: FocusBuddy -->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="https://unsplash.it/800/600?random=6" alt="Ảnh minh họa FocusBuddy">
+                        <div class="project-overlay">
+                            <a href="https://github.com/dinhtuandev/FocusBuddy" class="github-link" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>FocusBuddy</h3>
+                        <p class="project-desc content" data-vi="Ứng dụng giúp cải thiện năng suất làm việc bằng cách giảm căng thẳng và tăng sự tập trung." data-en="An application to improve work productivity by reducing stress and increasing focus.">
+                            Ứng dụng giúp cải thiện năng suất làm việc bằng cách giảm căng thẳng và tăng sự tập trung.
+                        </p>
+                        
+                        <div class="project-tech-container">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dự án 4: Website hệ thống quản lý và đặt chỗ gửi xe trực tuyến -->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="https://unsplash.it/800/600?random=4" alt="Ảnh minh họa FocusBuddy">
+                        <div class="project-overlay">
+                            <a href="https://github.com/huyvu0607/DatVeGiuXe" class="github-link" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Parking-Management-Website</h3>
+                        <p class="project-desc content" data-vi="Hệ thống quản lý và đặt chỗ gửi xe trực tuyến giúp người dùng dễ dàng tìm kiếm, đặt chỗ và thanh toán cho dịch vụ gửi xe." data-en="The online parking management and reservation system helps users easily search, book, and pay for parking services.">
+                            Hệ thống quản lý và đặt chỗ gửi xe trực tuyến giúp người dùng dễ dàng tìm kiếm, đặt chỗ và thanh toán cho dịch vụ gửi xe.
+                        </p>
+                        
+                        <div class="project-tech-container">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 13. Portfolio Gallery -->
+        <section id="gallery" class="section">
+            <h2 class="content" data-vi="<i class='fas fa-images'></i> THƯ VIỆN ẢNH" data-en="<i class='fas fa-images'></i> IMAGE GALLERY">
+                <i class="fas fa-images"></i> THƯ VIỆN ẢNH
+            </h2>
+            <!-- 2. Layout website: Dùng CSS Grid cho thư viện ảnh -->
+            <div class="image-gallery lazy-row">
+                <img src="https://unsplash.it/400/300?random=4" alt="Workspace 1">
+                <img src="https://unsplash.it/400/300?random=5" alt="Workspace 2">
+                <img src="https://unsplash.it/400/300?random=6" alt="Workspace 3">
+                <img src="https://unsplash.it/400/300?random=7" alt="Workspace 4">
+            </div>
+            
+        </section>
+        <!-- phần game -->
+         <section id="game" class="section">
+            <div>
+                <h2><i class="fas fa-gamepad"></i> MINI GAME</h2>
+                <div id="game-container">
+                    <div class="game-instructions">
+                        <p class="content" data-vi="Tìm các cặp thẻ giống nhau. Click vào thẻ để lật lên." data-en="Find matching pairs of cards. Click on the cards to flip them over.">
+                            Tìm các cặp thẻ giống nhau. Click vào thẻ để lật lên.
+                        </p>
+                        <p class="content" data-vi="bật dark theme để hiện thị (easter egg)" data-en="(Enable dark theme to reveal the Easter egg.)">
+                            bật dark theme để hiện thị (easter egg) ○( ＾皿＾)っ Hehehe…
+                        </p>
+                    </div>
+                    <div class="game-score-display">
+                        <div>Lượt: <span id="moves-count">0</span></div>
+                        <div>Cặp đã tìm thấy: <span id="pairs-found">0</span>/<span id="total-pairs">8</span></div>
+                    </div>
+                    <canvas id="memoryGame" width="600" height="400"></canvas>
+                    <div class="game-result" style="display: none;">
+                        <h3>Kết quả</h3>
+                        <div class="result-stats">
+                            <div class="result-item">
+                                <span class="result-label">Điểm số:</span>
+                                <span class="result-value" id="result-score">0</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Số lượt:</span>
+                                <span class="result-value" id="result-moves">0</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Thời gian:</span>
+                                <span class="result-value" id="result-time">0s</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Độ chính xác:</span>
+                                <span class="result-value" id="result-accuracy">0%</span>
+                            </div>
+                        </div>
+                        <p class="result-message" id="result-message"></p>
+                    </div>
+                    <button class="restart-button" style="display: none;">Chơi lại</button>
+                </div>
+            </div>
+        </section>
+        <!-- 9. Phần Liên hệ -->
+        <section id="contact" class="section">
+            <h2 class="content" data-vi="<i class='fas fa-envelope'></i> LIÊN HỆ" data-en="<i class='fas fa-envelope'></i> CONTACT">
+                <i class="fas fa-envelope"></i> LIÊN HỆ
+            </h2>
+            <p class="content" data-vi="Bạn có thể kết nối với tôi qua các kênh sau:" data-en="You can connect with me through the following channels:">Bạn có thể kết nối với tôi qua các kênh sau:</p>
+            <div class="social-links">
+                <!-- 9. Icons mạng xã hội + hiệu ứng hover đổi màu -->
+                <a href="https://github.com/dinhtuandev" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.facebook.com/tuanpro.tran.19022005/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/in/trandinhtuan0219/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer và JavaScript nhỏ -->
+    <footer>
+        <p><span class="content" data-vi="Bản quyền &copy; <span id='currentYear'></span> Trần Đình Tuấn. Mọi quyền được bảo lưu." data-en="Copyright &copy; <span id='currentYear'></span> Trần Đình Tuấn. All rights reserved.">Bản quyền &copy; <span id="currentYear"></span> Trần Đình Tuấn. Mọi quyền được bảo lưu.</span></p>
+    </footer>
+
+    <!-- Đoạn JavaScript nhỏ (chạy ngay) -->
+    <!-- <script>
+        // 11. Clean Code: Comment giải thích
+        // JavaScript: Hiển thị đồng hồ thời gian thực
+        function updateClock() {
+            const now = new Date();
+            const time = now.toLocaleTimeString('vi-VN');
+            const date = now.toLocaleDateString('vi-VN');
+            document.getElementById('clock').innerHTML = `<span class="time">${time}</span><br><span class="date">${date}</span>`;
+        }
+
+        // Cập nhật đồng hồ mỗi giây
+        updateClock();
+        setInterval(updateClock, 1000);
+
+        // JavaScript nhỏ: Tự động cập nhật năm hiện tại trong footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // JavaScript nhỏ: Nút cuộn lên đầu trang (Tuyệt đối không cần framework)
+        const scrollToTopBtn = document.createElement('button');
+        scrollToTopBtn.innerHTML = '&#9650;'; // Biểu tượng mũi tên lên
+        scrollToTopBtn.classList.add('scroll-to-top');
+        document.body.appendChild(scrollToTopBtn);
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+
+        scrollToTopBtn.onclick = function () {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        };
+        // JavaScript nhỏ: Chuyển đổi giao diện sáng/tối
+        const toggleSwitch = document.querySelector('.toggle-switch input[type="checkbox"]');
+        const body = document.body;
+
+        toggleSwitch.addEventListener('change', function () {
+            if (this.checked) {
+                body.classList.add('dark-theme');
+                body.classList.remove('light-theme');
+            } else {
+                body.classList.add('light-theme');
+                body.classList.remove('dark-theme');
+            }
+        });
+        // JavaScript nhỏ: Chuyển đổi ngôn ngữ (Tiếng Việt/English)
+        const languageSwitch = document.querySelector('.language-switch');
+        const content = document.querySelectorAll('.content');
+
+        languageSwitch.addEventListener('change', function () {
+            if (this.value === 'vi') {
+                content.forEach(element => {
+                    element.innerHTML = element.getAttribute('data-vi');
+                });
+            } else if (this.value === 'en') {
+                content.forEach(element => {
+                    element.innerHTML = element.getAttribute('data-en');
+                });
+            }
+        });
+    </script> -->
+    <script src="script.js"></script>
+</body>
+
+</html>
