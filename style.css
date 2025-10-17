@@ -198,25 +198,35 @@ body {
     font-weight: 600;
 }
 
-/* Mobile Navigation */
-.mobile-menu-btn {
-    display: none;
-    cursor: pointer;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: var(--primary-color);
+/* Khi ở mobile */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+    }
 }
 
 /* Media Queries cho Responsive */
 @media screen and (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+    
+    
     .navbar {
         padding: var(--spacing-sm) var(--spacing-md);
     }
     
-    .mobile-menu-btn {
-        display: block;
-    }
     
     .nav-links {
         position: fixed;

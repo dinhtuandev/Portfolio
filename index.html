@@ -20,7 +20,9 @@
     <!-- 1. Phần Navbar -->
     <nav class="navbar">
         <div class="nav-brand">Trần Đình Tuấn</div>
+    
         <ul class="nav-links">
+
             <li><a href="#about" class="content" data-vi="Giới thiệu" data-en="About">Giới thiệu</a></li>
             <li><a href="#objective" class="content" data-vi="Mục tiêu" data-en="Objective">Mục tiêu</a></li>
             <li><a href="#hobbies" class="content" data-vi="Sở thích" data-en="Hobbies">Sở thích</a></li>
@@ -42,6 +44,11 @@
                 <option value="vi">VI</option>
                 <option value="en">EN</option>
             </select>
+            <div>
+                <button class="mobile-menu-btn">
+                ☰
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -251,10 +258,11 @@
             </div>
 
             <!-- Ngôn ngữ -->
-            <h3 class="content" data-vi="NGÔN NGỮ" data-en="LANGUAGES">NGÔN NGỮ</h3>
+            <h2 class="content" data-vi="NGÔN NGỮ" data-en="LANGUAGES">NGÔN NGỮ</h2>
             <ul class="language-list">
                 <li><i class="fas fa-check-circle"></i> <span class="content" data-vi="Tiếng Việt (Native)" data-en="Vietnamese (Native)">Tiếng Việt (Native)</span></li>
                 <li><i class="fas fa-check-circle"></i> <span class="content" data-vi="Tiếng Anh (B2)" data-en="English (B2)">Tiếng Anh (B2)</span></li>
+                <li><i class="fas fa-check-circle"></i> <span class="content" data-vi="Tiếng Nhật (N5)" data-en="Japanese (N5)">Tiếng Nhật (N5)</span></li>
             </ul>
         </section>
 
@@ -464,7 +472,7 @@
                         <p class="content" data-vi="Tìm các cặp thẻ giống nhau. Click vào thẻ để lật lên." data-en="Find matching pairs of cards. Click on the cards to flip them over.">
                             Tìm các cặp thẻ giống nhau. Click vào thẻ để lật lên.
                         </p>
-                        <p class="content" data-vi="bật dark theme để hiện thị game" data-en="(Enable dark theme to reveal the game.)">
+                        <p style="color: #ff0000;" class="content" data-vi="bật dark theme để hiện thị game" data-en="(Enable dark theme to reveal the game.)">
                             bật dark theme để hiện thị game ○( ＾皿＾)っ Hehehe…
                         </p>
                     </div>
@@ -515,76 +523,12 @@
 
     </main>
 
-    <!-- Footer và JavaScript nhỏ -->
+    <!-- Footer và import JavaScript -->
     <footer>
         <p><span class="content" data-vi="Bản quyền &copy; <span id='currentYear'></span> Trần Đình Tuấn. Mọi quyền được bảo lưu." data-en="Copyright &copy; <span id='currentYear'></span> Trần Đình Tuấn. All rights reserved.">Bản quyền &copy; <span id="currentYear"></span> Trần Đình Tuấn. Mọi quyền được bảo lưu.</span></p>
     </footer>
 
-    <!-- Đoạn JavaScript nhỏ (chạy ngay) -->
-    <!-- <script>
-        // 11. Clean Code: Comment giải thích
-        // JavaScript: Hiển thị đồng hồ thời gian thực
-        function updateClock() {
-            const now = new Date();
-            const time = now.toLocaleTimeString('vi-VN');
-            const date = now.toLocaleDateString('vi-VN');
-            document.getElementById('clock').innerHTML = `<span class="time">${time}</span><br><span class="date">${date}</span>`;
-        }
-
-        // Cập nhật đồng hồ mỗi giây
-        updateClock();
-        setInterval(updateClock, 1000);
-
-        // JavaScript nhỏ: Tự động cập nhật năm hiện tại trong footer
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-        // JavaScript nhỏ: Nút cuộn lên đầu trang (Tuyệt đối không cần framework)
-        const scrollToTopBtn = document.createElement('button');
-        scrollToTopBtn.innerHTML = '&#9650;'; // Biểu tượng mũi tên lên
-        scrollToTopBtn.classList.add('scroll-to-top');
-        document.body.appendChild(scrollToTopBtn);
-
-        window.onscroll = function () {
-            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-                scrollToTopBtn.style.display = "block";
-            } else {
-                scrollToTopBtn.style.display = "none";
-            }
-        };
-
-        scrollToTopBtn.onclick = function () {
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        };
-        // JavaScript nhỏ: Chuyển đổi giao diện sáng/tối
-        const toggleSwitch = document.querySelector('.toggle-switch input[type="checkbox"]');
-        const body = document.body;
-
-        toggleSwitch.addEventListener('change', function () {
-            if (this.checked) {
-                body.classList.add('dark-theme');
-                body.classList.remove('light-theme');
-            } else {
-                body.classList.add('light-theme');
-                body.classList.remove('dark-theme');
-            }
-        });
-        // JavaScript nhỏ: Chuyển đổi ngôn ngữ (Tiếng Việt/English)
-        const languageSwitch = document.querySelector('.language-switch');
-        const content = document.querySelectorAll('.content');
-
-        languageSwitch.addEventListener('change', function () {
-            if (this.value === 'vi') {
-                content.forEach(element => {
-                    element.innerHTML = element.getAttribute('data-vi');
-                });
-            } else if (this.value === 'en') {
-                content.forEach(element => {
-                    element.innerHTML = element.getAttribute('data-en');
-                });
-            }
-        });
-    </script> -->
+    
     <script src="script.js"></script>
 </body>
 

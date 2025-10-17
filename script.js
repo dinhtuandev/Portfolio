@@ -345,5 +345,30 @@ document.addEventListener("DOMContentLoaded", function () {
     drawGame();
   });
 });
+    // Thêm nút ☰ vào navbar
+    const menuBtn = document.querySelector(".mobile-menu-btn");
+    const navLinks = document.querySelector(".nav-links");
+     const navItems = document.querySelectorAll(".nav-links a");
     
+     if (menuBtn && navLinks) {
+        // Khi bấm nút ☰, toggle menu
+        menuBtn.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    }
+    // Khi click vào 1 link trong menu -> đóng menu lại (chỉ áp dụng mobile)
+    navItems.forEach(link => {
+        link.addEventListener("click", () => {
+            if (window.innerWidth <= 768) {
+                navLinks.classList.remove("active");
+            }
+        });
+    });
+    // Nếu resize trở lại laptop thì menu tự đóng
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 768) {
+            navLinks.classList.remove("active");
+        }
+    });
+   
 });
