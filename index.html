@@ -117,6 +117,12 @@
 			#navbar-toggle-button {
 				display: none;
 			}
+
+			/* Fix for navbar wrapping on small screens */
+			.ftco-navbar-light {
+				-ms-flex-wrap: nowrap;
+				flex-wrap: nowrap;
+			}
 		}
 
 		/* Scroll to Top Button */
@@ -356,7 +362,45 @@
 			</div>
 		</div>
 	</section>
-
+	<!-- Languages -->
+	<section class="ftco-section" id="Language-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-12 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Languages</h1>
+					<h2 class="mb-4">My Languages</h2>
+					<p>Tôi có khả năng sử dụng các ngôn ngữ sau:</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 text-center animate-box">
+					<img src="https://flagpedia.net/data/flags/w640/vn.webp" alt="VN flag"
+						style="width: 50px; height: auto;">
+					<h4>Tiếng Việt</h4>
+					<p style="font-size: 25px;">Native</p>
+				</div>
+				<div class="col-md-4 text-center animate-box">
+					<img src="https://flagpedia.net/data/flags/w640/us.webp" alt="US flag"
+						style="width: 50px; height: auto;">
+					<h4>Tiếng Anh</h4>
+					<p style="font-size: 25px;">B2</p>
+				</div>
+				<div class="col-md-4 text-center animate-box">
+					<img src="https://flagpedia.net/data/flags/w640/jp.webp" alt="JP flag"
+						style="width: 50px; height: auto;">
+					<h4>Tiếng Nhật</h4>
+					<p style="font-size: 25px;">N5</p>
+				</div>
+			</div>
+			<div>
+				<p style="text-align: center;">Mục đích học tôi học tiếng nhật là muốn sang nhật bản du lịch khám phá
+					các thành phố nổi
+					tiếng
+					như Osaka, Hiroshima...</p>
+			</div>
+		</div>
+		<!-- resume -->
+	</section>
 	<section class="ftco-section ftco-no-pb" id="resume-section">
 		<div class="container">
 			<div class="row justify-content-center pb-5">
@@ -476,44 +520,7 @@
 			</div>
 		</div>
 	</section>
-	<!-- Languages -->
-	<section class="ftco-section" id="Language-section">
-		<div class="container">
-			<div class="row justify-content-center pb-5">
-				<div class="col-md-12 heading-section text-center ftco-animate">
-					<h1 class="big big-2">Languages</h1>
-					<h2 class="mb-4">My Languages</h2>
-					<p>Tôi có khả năng sử dụng các ngôn ngữ sau:</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4 text-center animate-box">
-					<img src="https://flagpedia.net/data/flags/w640/vn.webp" alt="VN flag"
-						style="width: 50px; height: auto;">
-					<h4>Tiếng Việt</h4>
-					<p style="font-size: 25px;">Native</p>
-				</div>
-				<div class="col-md-4 text-center animate-box">
-					<img src="https://flagpedia.net/data/flags/w640/us.webp" alt="US flag"
-						style="width: 50px; height: auto;">
-					<h4>Tiếng Anh</h4>
-					<p style="font-size: 25px;">B2</p>
-				</div>
-				<div class="col-md-4 text-center animate-box">
-					<img src="https://flagpedia.net/data/flags/w640/jp.webp" alt="JP flag"
-						style="width: 50px; height: auto;">
-					<h4>Tiếng Nhật</h4>
-					<p style="font-size: 25px;">N5</p>
-				</div>
-			</div>
-			<div>
-				<p style="text-align: center;">Mục đích học tôi học tiếng nhật là muốn sang nhật bản du lịch khám phá các thành phố nổi
-					tiếng
-					như Osaka, Hiroshima...</p>
-			</div>
-		</div>
-		
-	</section>
+
 
 	<!-- Skills -->
 
@@ -1058,7 +1065,8 @@
 				<div class="col-md-12 text-center">
 
 					<p>
-						<img style="width: 50px; height: 50px; border-radius: 50%;" src="images/favicon.png" alt="favicon">
+						<img style="width: 50px; height: 50px; border-radius: 50%;" src="images/favicon.png"
+							alt="favicon">
 						Copyright &copy;
 						<script>document.write(new Date().getFullYear());</script> All rights reserved | This template
 						is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="#"

@@ -177,11 +177,12 @@
 
 	var counter = function() {
 		
-		$('#section-counter, .hero-wrap, .ftco-counter, .ftco-about').waypoint( function( direction ) {
+		$('#section-counter').waypoint( function( direction ) {
 
 			if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
 
-				$('.number').each(function(){
+				var numbers = $(this.element).find('.number');
+				numbers.each(function(){
 					var $this = $(this),
 						num = $this.data('number'),
 						append = $this.data('append') || ''; // Get the append character
@@ -194,6 +195,7 @@
 					  }, 7000,
 					);
 				});
+				$(this.element).addClass('ftco-animated');
 				
 			}
 
@@ -201,6 +203,46 @@
 
 	}
 	counter();
+
+	// Skills Counter
+	var skillsCounter = function() {
+		$('#skills-section').waypoint( function( direction ) {
+
+			if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
+
+				$(this.element).find('.progress-bar').each(function(){
+					var $this = $(this),
+						num = parseInt($this.attr('aria-valuenow')), // Lấy giá trị phần trăm từ thuộc tính aria-valuenow
+						span = $this.find('span'); // Lấy phần tử span chứa số phần trăm
+					
+					// Đặt chiều rộng ban đầu của thanh tiến trình về 0% để bắt đầu animation
+					$this.css('width', '0%');
+
+					// Animate chiều rộng của thanh tiến trình
+					$this.animate({
+						width: num + '%'
+					}, {
+						duration: 4000, // Thời gian animation (miliseconds)
+						easing: 'swing'
+					});
+
+					// Animate số phần trăm bên trong span
+					$({ Counter: 0 }).animate({ Counter: num }, {
+						duration: 1500, // Thời gian animation (miliseconds)
+						easing: 'swing',
+						step: function () {
+							span.text(Math.ceil(this.Counter) + '%'); // Cập nhật text trong span
+						}
+					});
+				});
+				$(this.element).addClass('ftco-animated'); // Đánh dấu đã animate để không chạy lại
+				
+			}
+
+		} , { offset: '95%' } ); // Kích hoạt khi 95% phần tử hiển thị trên màn hình
+
+	}
+	skillsCounter();
 
 
 	var contentWayPoint = function() {
