@@ -1,4 +1,4 @@
- AOS.init({
+AOS.init({
  	duration: 800,
  	easing: 'slide'
  });
@@ -315,5 +315,71 @@
 
 
 
+
+// New counter animation for projects counter
+var projectCounter = function() {
+    $('.counter-wrap').waypoint(function(direction) {
+        if (direction === 'down' && !$(this.element).hasClass('ftco-animated')) {
+            
+            var numbers = $(this.element).find('.number');
+            numbers.each(function() {
+                var $this = $(this);
+                var num = parseInt($this.data('number'));
+                var append = $this.data('append') || '';
+                var duration = parseInt($this.data('duration')) || 2000; // Default 2 seconds
+                
+                // Reset to 0 before starting animation
+                $this.text('0' + append);
+                
+                // Animate the number
+                $({ Counter: 0 }).animate({ Counter: num }, {
+                    duration: duration,
+                    easing: 'swing',
+                    step: function() {
+                        $this.text(Math.ceil(this.Counter) + append);
+                    },
+                    complete: function() {
+                        // Ensure final number is exact
+                        $this.text(num + append);
+                    }
+                });
+            });
+            
+            $(this.element).addClass('ftco-animated');
+        }
+    }, { offset: '95%' });
+};
+
+// Initialize the project counter
+projectCounter();
+
+// Optional: Add more counters easily
+var initCounters = function() {
+    $('[data-counter]').each(function() {
+        var $counter = $(this);
+        var target = $counter.data('counter');
+        var duration = $counter.data('duration') || 2000;
+        
+        $counter.waypoint(function(direction) {
+            if (direction === 'down' && !$counter.hasClass('animated')) {
+                var endValue = parseInt(target);
+                $({ Counter: 0 }).animate({ Counter: endValue }, {
+                    duration: duration,
+                    easing: 'swing',
+                    step: function() {
+                        $counter.text(Math.ceil(this.Counter));
+                    },
+                    complete: function() {
+                        $counter.text(endValue);
+                        $counter.addClass('animated');
+                    }
+                });
+            }
+        }, { offset: '95%' });
+    });
+};
+
+// Initialize additional counters
+initCounters();
 
 })(jQuery);
